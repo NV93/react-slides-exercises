@@ -99,8 +99,9 @@ var SelfDestructTimerComponent = React.createClass ({
     },
     render: function() {
         var bgStyle;
-        if(this.state.count<=0){ bgStyle= { background: "red"}}; 
-        
+        if(this.state.count<=0){
+            bgStyle= { background: "red"}
+        }; 
             return(<div style={bgStyle}>Self destruct: {this.state.count}</div>              
         )       
     }
