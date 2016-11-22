@@ -99,6 +99,12 @@ var SelfDestructTimerComponent = React.createClass ({
     },
     render: function() {
         return (<div>Self destruct: {this.state.count}</div>);
+//        if(this.state.count<=0){
+//        return(<div>Self destruct: {this.state.count},
+//                
+//        )
+//        }
+        
     }
 });
 
