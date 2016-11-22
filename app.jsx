@@ -37,6 +37,7 @@ ProductCardComponent.propTypes = {
   price: PropTypes.number.isRequired,
 };
 
+
 var ProductListComponent = function(props) {
   var productCards = props.products.map(function (product, index) {
     return (
@@ -81,4 +82,26 @@ var testProducts = [
   }
 ];
 
+var SelfDestructTimerComponent = React.createClass ({
+    getInitialState: function() {
+      return {count:42};  
+    },
+    decreeseTimer: function(){
+        if(this.state.count>0){
+            this.setState({
+                count: this.state.count - 1
+            })
+        }
+    },
+    componentWillMount: function() {
+        
+        setInterval(this.decreeseTimer, 1000)
+    },
+    render: function() {
+        return (<div>Self destruct: {this.state.count}</div>);
+    }
+});
+
+
 ReactDOM.render(<ProductListComponent products={testProducts} />, document.getElementById('root'));
+ReactDOM.render(<SelfDestructTimerComponent />, document.getElementById('counter'));
