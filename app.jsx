@@ -84,7 +84,7 @@ var testProducts = [
 
 var SelfDestructTimerComponent = React.createClass ({
     getInitialState: function() {
-      return {count:42};  
+      return {count:3};  
     },
     decreeseTimer: function(){
         if(this.state.count>0){
@@ -98,13 +98,11 @@ var SelfDestructTimerComponent = React.createClass ({
         setInterval(this.decreeseTimer, 1000)
     },
     render: function() {
-        return (<div>Self destruct: {this.state.count}</div>);
-//        if(this.state.count<=0){
-//        return(<div>Self destruct: {this.state.count},
-//                
-//        )
-//        }
+        var bgStyle;
+        if(this.state.count<=0){ bgStyle= { background: "red"}}; 
         
+            return(<div style={bgStyle}>Self destruct: {this.state.count}</div>              
+        )       
     }
 });
 
