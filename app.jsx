@@ -121,22 +121,25 @@ var ProductAdministartionComponent = React.createClass( {
     render: function() {
         return (
             <div className="row">
-                <div className="col-sm-12 col-md-12">
-                    <form className="form-inline">
+                <div className="col-sm-3 col-md-3">
+                    <form className="form-group">
                         <div className="form-group">
-                            <label className="sr-only" for="exampleInputEmail3">Email address</label>
-                            <input type="email" className="form-control" id="exampleInputEmail3" placeholder="El.pastas"/>
+                            <label className="sr-only" for="exampleInputTitle">Title</label>
+                            <input type="text" className="form-control" id="exampleInputTitle" placeholder="Enter title"/>
                         </div>
                         <div className="form-group">
-                            <label className="sr-only" for="exampleInputPassword3">Password</label>
-                            <input type="password" className="form-control" id="exampleInputPassword3" placeholder="Slaptazodis"/> &nbsp;
+                            <label className="sr-only" for="exampleInputPassword3">ImageURL</label>
+                            <input type="URL" className="form-control" id="exampleInputURL" placeholder="Input URL"/> 
                         </div>
-                        <div className="checkbox">
-                            <label>
-                                <input type="checkbox"/> Prisiminti &nbsp;
-                            </label>
+                        <div className="form-group">
+                          <label className="sr-only" for="exampleInputPrice">Price</label>
+                          <input type="text" className="form-control" id="exampleInputPrice" placeholder="Enter price"/>
                         </div>
-                        <button type="submit" className="btn btn-default">Prisijungti</button>
+                        <div className="form-group">
+                            <label className="sr-only" for="exampleInputDescription">Description</label>
+                            <input type="text" className="form-control" id="exampleInputDescription" placeholder="Enter description"/>
+                        </div>
+                        <button type="submit" className="btn btn-default">Save</button>
                       </form>
                   </div>
               </div>
